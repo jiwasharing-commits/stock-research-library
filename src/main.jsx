@@ -1,6 +1,6 @@
 import React, {useMemo, useState} from 'react'
 import {createRoot} from 'react-dom/client'
-import {BrowserRouter, Link, NavLink, Route, Routes, useNavigate, useParams} from 'react-router-dom'
+import {HashRouter, Link, NavLink, Route, Routes, useNavigate, useParams} from 'react-router-dom'
 import {ArrowLeft, ArrowRight, BookOpen, Check, ChevronLeft, ChevronRight, Download, Expand, FileText, Filter, Library, LockKeyhole, Menu, Search, ShoppingBag, SlidersHorizontal, Sparkles, X, ZoomIn} from 'lucide-react'
 import research from './data/research.json'
 import learning from './data/learning.json'
@@ -39,4 +39,6 @@ function MyLibrary(){return <main className="page shell"><div className="page-ti
 function Disclaimer(){return <main className="page shell prose"><p className="eyebrow">PLEASE READ</p><h1>Disclaimer</h1><h2>Materi edukasi, bukan rekomendasi.</h2><p>{DISCLAIMER}</p><p>Seluruh konten pada prototype ini adalah data sample dan placeholder. Nama perusahaan dan ticker digunakan hanya untuk mendemonstrasikan struktur antarmuka, bukan sebagai analisis atau pendapat investasi aktual.</p><h2>Keputusan tetap milik pembaca.</h2><p>Lakukan riset mandiri dan pertimbangkan profil risiko sebelum membuat keputusan investasi. Kinerja masa lalu tidak menjamin hasil di masa depan.</p></main>}
 function Footer(){return <footer><div className="shell footer-grid"><div><Link className="brand" to="/"><span>SN</span>{BRAND}</Link><p>Baca bisnisnya. Susun pemahamannya.<br/>Jangan bikin kepala panas.</p></div><div><b>Explore</b><Link to="/explore/research">Research</Link><Link to="/explore/learning">Learning</Link><Link to="/library">My Library</Link></div><div><b>Info</b><Link to="/disclaimer">Disclaimer</Link><a href="mailto:hello@example.com">Contact</a></div></div><div className="shell footnote"><p>{DISCLAIMER}</p><span>© 2026 {BRAND} · Prototype</span></div></footer>}
 function App(){return <><Header/><Routes><Route path="/" element={<Home/>}/><Route path="/explore/:type" element={<Explore/>}/><Route path="/detail/:type/:id" element={<Detail/>}/><Route path="/collection/:sector" element={<Collection/>}/><Route path="/library" element={<MyLibrary/>}/><Route path="/disclaimer" element={<Disclaimer/>}/></Routes><Footer/></>}
-createRoot(document.getElementById('root')).render(<BrowserRouter><App/></BrowserRouter>)
+// Hash routing keeps every client route behind GitHub Pages' real index.html,
+// so opening or refreshing a detail page does not require a server-side fallback.
+createRoot(document.getElementById('root')).render(<HashRouter><App/></HashRouter>)
