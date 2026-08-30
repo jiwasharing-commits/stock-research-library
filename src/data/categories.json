@@ -1,0 +1,11 @@
+[
+  {"name":"Semua","icon":"Sparkles","description":"Semua catatan, satu rak."},
+  {"name":"Oil & Gas","icon":"Droplets","description":"Kenali rantai bisnis energi dari hulu hingga hilir."},
+  {"name":"Kabel","icon":"Cable","description":"Produsen, bahan baku, dan permintaan infrastruktur."},
+  {"name":"Land Bank","icon":"Map","description":"Memahami aset lahan dan monetisasinya."},
+  {"name":"MNO","icon":"Radio","description":"Ekonomi bisnis operator seluler."},
+  {"name":"Tower","icon":"Antenna","description":"Infrastruktur menara dan pertumbuhan data."},
+  {"name":"Energi","icon":"Zap","description":"Pembangkit dan transisi energi."},
+  {"name":"Properti","icon":"Building2","description":"Siklus, pra-penjualan, dan recurring income."},
+  {"name":"Infrastruktur","icon":"Construction","description":"Aset yang menopang ekonomi."}
+]
